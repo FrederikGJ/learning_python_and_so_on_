@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 
+#sentiment analyser for the news on DR 
+
 def count_positive_words(texts, words):
     count = 0
     for text in texts:
