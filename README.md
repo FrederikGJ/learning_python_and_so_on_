@@ -1,2 +1,2 @@
-# learning python
-not much more to say about that 
+# sentiment analyser
+extremely basic sentiment analyser

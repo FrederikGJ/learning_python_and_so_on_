@@ -27,13 +27,13 @@ for link in links:
     if text not in printed_texts:
         printed_texts.add(text)
 
-positive_words = ["godt", "opsving", "stærkt"]
+positive_words = ["godt", "opsving", "stærkt", "gode", "sejr"]
 positive_ord = count_positive_words(printed_texts, positive_words)
 print("Antallet af positive ord er: ", positive_ord)
 
 negative_words = ["inflation", "konflikt", "inflation", "prisstigninger","nedtur", "strejke"]
 negative_ord = count_negative_words(printed_texts, negative_words)
-print("Antallet af negative ord er:", negative_words)
+print("Antallet af negative ord er:", negative_ord)
 
 for text in printed_texts:
     print(text)
