@@ -11,5 +11,5 @@ print("you get a new " + car1.model)
 
 print("Min truck hedder "+ truck1.name + " og den er " + truck1.size)
 print("når jeg dytter med hornet siger det ")
-truck1.truck_honk
+truck1.truck_honk() 
 
