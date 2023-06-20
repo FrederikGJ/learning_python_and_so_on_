@@ -4,4 +4,3 @@ Extremely basic economic sentiment analyser.
 I started this project to learn about python and ended up with a very basic sentiment anlyser. 
 It is able to do a simple word count on positive and negative words in financial news in denmark. 
 
--- For now it only does one news site. More should be added. 
