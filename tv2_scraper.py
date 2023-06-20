@@ -16,7 +16,7 @@ def count_negative_words(texts, words):
     return count
 
 
-page_to_scrape = requests.get("https://www.berlingske.dk/business")
+page_to_scrape = requests.get("https://borsen.dk/nyheder/profinans")
 soup = BeautifulSoup(page_to_scrape.text, "html.parser")
 links = soup.findAll(href=lambda href: href and href.startswith('/nyheder/'))
 
