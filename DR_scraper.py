@@ -29,7 +29,7 @@ for link in links:
     if text not in printed_texts:
         printed_texts.add(text)
 
-positive_words = ["godt", "opsving", "stærkt", "gode", "sejr"]
+positive_words = ["godt", "opsving", "stærkt", "gode", "sejr", "vækst"]
 positive_ord = count_positive_words(printed_texts, positive_words)
 print("Antallet af positive ord er: ", positive_ord)
 
