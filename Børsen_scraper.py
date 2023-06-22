@@ -1,8 +1,10 @@
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup 
 import requests
+from base_scraper import BaseScraper
 
-class BorsenScraper:
+class BorsenScraper(BaseScraper):
     def __init__(self):
+        super().__init__()  # This calls the parent's (BaseScraper's) constructor
         self.page_to_scrape = requests.get("https://borsen.dk/nyheder/profinans")
         self.soup = BeautifulSoup(self.page_to_scrape.text, "html.parser")
         self.links = self.soup.findAll(href=lambda href: href and href.startswith('/nyheder/'))
@@ -11,8 +13,6 @@ class BorsenScraper:
             text = link.text.strip()  
             if text not in self.printed_texts:
                 self.printed_texts.append(text)
-        self.positive_words = ["godt", "opsving", "stærkt", "gode", "sejr", "vækst"]
-        self.negative_words = ["inflation", "konflikt", "inflation", "prisstigninger","nedtur", "strejke"]
 
     def count_positive_words(self):
         count = 0

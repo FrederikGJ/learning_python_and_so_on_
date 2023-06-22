@@ -22,14 +22,13 @@ class Main:
         print("Antallet af positive ord hos Danmarks Radio er: ", scraper4.count_positive_words())
         print("Antallet af negative ord hos Danmarks Radio er: ", scraper4.count_negative_words())
         
-        print("")
-        print("Overskrifter fra TV2 :\n")
+        print("\nOverskrifter fra TV2 :\n")
         scraper1.print_labels()
-        print("Overskrifter fra TV2 :\n")
+        print("\nOverskrifter fra Borsen :\n")
         scraper2.print_texts()
-        print("Overskrifter fra TV2 :\n")
+        print("\nOverskrifter fra Finans :\n")
         scraper3.print_texts()
-        print("Overskrifter fra TV2 :\n")
+        print("\nOverskrifter fra Danmarks Radio :\n")
         scraper4.print_texts()
 
 if __name__ == '__main__':
