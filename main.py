@@ -1,6 +1,7 @@
 from tv2_business_scraper import TV2Scraper
 from Børsen_scraper import BorsenScraper
 from Finans_scraper import FinansScraper
+from DR_scraper import DRSCraper
 
 class Main:
     def __init__(self):
@@ -18,6 +19,12 @@ class Main:
         print("Antallet af positive ord er: ", scraper3.count_positive_words())
         print("Antallet af negative ord er: ", scraper3.count_negative_words())
         scraper3.print_texts()
+
+
+        scraper4 = DRSCraper()
+        print("Antallet af positive ord er: ", scraper4.count_positive_words())
+        print("Antallet af negative ord er: ", scraper4.count_negative_words())
+        scraper4.print_texts()
 
 
 
