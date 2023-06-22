@@ -1,3 +1,1 @@
-
---- De skal have positive og negative word til fælles - jeg har brug for en abstrakt klasse eller et interface sådan at alle nedarber de samme ord
 --- jeg skal lave en brugerflade i flask og lægge den ud på github pages 
