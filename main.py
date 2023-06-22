@@ -23,7 +23,7 @@ class Main:
         print("Antallet af negative ord hos Danmarks Radio er: ", scraper4.count_negative_words())
         
         print("\nOverskrifter fra TV2 :\n")
-        scraper1.print_labels()
+        scraper1.print_texts()
         print("\nOverskrifter fra Borsen :\n")
         scraper2.print_texts()
         print("\nOverskrifter fra Finans :\n")
