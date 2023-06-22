@@ -1,16 +1,16 @@
 from bs4 import BeautifulSoup
 import requests
+from base_scraper import BaseScraper
 
-class FinansScraper:
+class FinansScraper(BaseScraper):
     def __init__(self):
-        self.page_to_scrape = requests.get("https://finans.dk/erhverv/")
+        super().__init__()  # This calls the parent's (BaseScraper's) constructor
+        self.page_to_scrape = requests.get("https://borsen.dk/nyheder/profinans")
         self.soup = BeautifulSoup(self.page_to_scrape.text, "html.parser")
         self.elements = self.soup.find_all('span', class_='c-article-teaser-heading__text')
         self.texts = []  
         for element in self.elements:
             self.texts.append(element.text)
-        self.positive_words = ["godt", "opsving", "stærkt", "gode", "sejr", "vækst"]
-        self.negative_words = ["inflation", "konflikt", "inflation", "prisstigninger","nedtur", "strejke", "bedrageri"]
 
     def count_positive_words(self):
         count = 0
