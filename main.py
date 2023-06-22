@@ -32,7 +32,5 @@ class Main:
         print("Overskrifter fra TV2 :\n")
         scraper4.print_texts()
 
-
-
 if __name__ == '__main__':
     Main()
