@@ -5,7 +5,7 @@ from base_scraper import BaseScraper
 class FinansScraper(BaseScraper):
     def __init__(self):
         super().__init__()  # This calls the parent's (BaseScraper's) constructor
-        self.page_to_scrape = requests.get("https://borsen.dk/nyheder/profinans")
+        self.page_to_scrape = requests.get("https://finans.dk/erhverv/")
         self.soup = BeautifulSoup(self.page_to_scrape.text, "html.parser")
         self.elements = self.soup.find_all('span', class_='c-article-teaser-heading__text')
         self.texts = []  
