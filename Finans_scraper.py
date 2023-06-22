@@ -1,36 +1,31 @@
 from bs4 import BeautifulSoup
 import requests
 
-def count_positive_words(texts, words):
-    count = 0
-    for text in texts:
-        for word in words:
-            count += text.lower().count(word)
-    return count
+class FinansScraper:
+    def __init__(self):
+        self.page_to_scrape = requests.get("https://finans.dk/erhverv/")
+        self.soup = BeautifulSoup(self.page_to_scrape.text, "html.parser")
+        self.elements = self.soup.find_all('span', class_='c-article-teaser-heading__text')
+        self.texts = []  
+        for element in self.elements:
+            self.texts.append(element.text)
+        self.positive_words = ["godt", "opsving", "stærkt", "gode", "sejr", "vækst"]
+        self.negative_words = ["inflation", "konflikt", "inflation", "prisstigninger","nedtur", "strejke", "bedrageri"]
 
-def count_negative_words(texts, words):
-    count = 0
-    for text in texts:
-        for word in words:
-            count += text.lower().count(word)
-    return count
+    def count_positive_words(self):
+        count = 0
+        for text in self.texts:
+            for word in self.positive_words:
+                count += text.lower().count(word)
+        return count
 
-page_to_scrape = requests.get("https://finans.dk/erhverv/")
-soup = BeautifulSoup(page_to_scrape.text, "html.parser")
-elements = soup.find_all('span', class_='c-article-teaser-heading__text')
+    def count_negative_words(self):
+        count = 0
+        for text in self.texts:
+            for word in self.negative_words:
+                count += text.lower().count(word)
+        return count
 
-texts = []  
-
-for element in elements:
-    texts.append(element.text)
-
-positive_words = ["godt", "opsving", "stærkt", "gode", "sejr", "vækst"]
-positive_ord = count_positive_words(texts, positive_words)
-print("Antallet af positive ord er: ", positive_ord)
-
-negative_words = ["inflation", "konflikt", "inflation", "prisstigninger","nedtur", "strejke", "bedrageri"]
-negative_ord = count_negative_words(texts, negative_words)
-print("Antallet af negative ord er:", negative_ord)
-
-for text in texts:
-    print(text)
+    def print_texts(self):
+        for text in self.texts:
+            print(text)
