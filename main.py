@@ -6,24 +6,30 @@ from DR_scraper import DRSCraper
 class Main:
     def __init__(self):
         scraper1 = TV2Scraper()
+        scraper2 = BorsenScraper()
+        scraper3 = FinansScraper()
+        scraper4 = DRSCraper()
+
         print("Antallet af positive ord hos tv2 er: ", scraper1.count_positive_words())
         print("Antallet af negative ord hos tv2 er: ", scraper1.count_negative_words())
-        scraper1.print_labels()
 
-        scraper2 = BorsenScraper()
         print("Antallet af positive ord hos Borsen er: ", scraper2.count_positive_words())
         print("Antallet af negative ord hos Borsen er: ", scraper2.count_negative_words())
+        
+        print("Antallet af positive ord hos Finans er: ", scraper3.count_positive_words())
+        print("Antallet af negative ord hos Finans er: ", scraper3.count_negative_words())
+        
+        print("Antallet af positive ord hos Danmarks Radio er: ", scraper4.count_positive_words())
+        print("Antallet af negative ord hos Danmarks Radio er: ", scraper4.count_negative_words())
+        
+        print("")
+        print("Overskrifter fra TV2 :\n")
+        scraper1.print_labels()
+        print("Overskrifter fra TV2 :\n")
         scraper2.print_texts()
-
-        scraper3 = FinansScraper()
-        print("Antallet af positive ord er: ", scraper3.count_positive_words())
-        print("Antallet af negative ord er: ", scraper3.count_negative_words())
+        print("Overskrifter fra TV2 :\n")
         scraper3.print_texts()
-
-
-        scraper4 = DRSCraper()
-        print("Antallet af positive ord er: ", scraper4.count_positive_words())
-        print("Antallet af negative ord er: ", scraper4.count_negative_words())
+        print("Overskrifter fra TV2 :\n")
         scraper4.print_texts()
 
 
