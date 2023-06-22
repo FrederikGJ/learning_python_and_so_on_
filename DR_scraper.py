@@ -13,8 +13,6 @@ class DRSCraper(BaseScraper):
                     text = link.text
                     if text not in self.printed_texts:
                         self.printed_texts.add(text)
-                self.positive_words = ["godt", "opsving", "stærkt", "gode", "sejr", "vækst"]
-                self.negative_words = ["inflation", "konflikt", "inflation", "prisstigninger","nedtur", "strejke"]
 
     def count_positive_words(self):
         count = 0
