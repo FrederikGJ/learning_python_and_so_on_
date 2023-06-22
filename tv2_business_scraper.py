@@ -1,3 +1,7 @@
+class tv2_scraper: 
+
+    
+
 from bs4 import BeautifulSoup
 import requests
 
