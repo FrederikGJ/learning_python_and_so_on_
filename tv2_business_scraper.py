@@ -8,7 +8,7 @@ class TV2Scraper(BaseScraper):
         self.page_to_scrape = requests.get("https://nyheder.tv2.dk/business")
         self.soup = BeautifulSoup(self.page_to_scrape.text, "html.parser")
         self.elements = self.soup.find_all(lambda tag: tag.name == 'a' and tag.get('href') and tag.get('href').startswith('https://nyheder.tv2.dk/business/'))
-        self.printed_texts = []  # renamed from aria_labels
+        self.printed_texts = []  
         for element in self.elements:
             aria_label = element.get('aria-label')
             if aria_label and aria_label not in self.printed_texts:
@@ -16,18 +16,18 @@ class TV2Scraper(BaseScraper):
 
     def count_positive_words(self):
         count = 0
-        for label in self.printed_texts:  # changed from aria_labels
+        for label in self.printed_texts:  
             for word in self.positive_words:
                 count += label.lower().count(word)
         return count
 
     def count_negative_words(self):
         count = 0
-        for label in self.printed_texts:  # changed from aria_labels
+        for label in self.printed_texts:  
             for word in self.negative_words:
                 count += label.lower().count(word)
         return count
 
     def print_texts(self):  
-        for label in self.printed_texts:  # changed from aria_labels
+        for label in self.printed_texts:  
             print(label)
