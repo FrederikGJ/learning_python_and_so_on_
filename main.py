@@ -13,27 +13,26 @@ class Main:
         total_negative = scraper1.count_negative_words() + scraper2.count_negative_words() + scraper3.count_negative_words() + scraper4.count_negative_words()
         total_positive = scraper1.count_positive_words() + scraper2.count_positive_words() + scraper3.count_positive_words() + scraper4.count_positive_words()
 
+        #print("Antallet af positive ord hos tv2 er: ", scraper1.count_positive_words())
+        #print("Antallet af negative ord hos tv2 er: ", scraper1.count_negative_words())
 
-        print("Antallet af positive ord hos tv2 er: ", scraper1.count_positive_words())
-        print("Antallet af negative ord hos tv2 er: ", scraper1.count_negative_words())
-
-        print("Antallet af positive ord hos Borsen er: ", scraper2.count_positive_words())
-        print("Antallet af negative ord hos Borsen er: ", scraper2.count_negative_words())
+        #print("Antallet af positive ord hos Borsen er: ", scraper2.count_positive_words())
+        #print("Antallet af negative ord hos Borsen er: ", scraper2.count_negative_words())
         
-        print("Antallet af positive ord hos Finans er: ", scraper3.count_positive_words())
-        print("Antallet af negative ord hos Finans er: ", scraper3.count_negative_words())
+        #print("Antallet af positive ord hos Finans er: ", scraper3.count_positive_words())
+        #print("Antallet af negative ord hos Finans er: ", scraper3.count_negative_words())
         
-        print("Antallet af positive ord hos Danmarks Radio er: ", scraper4.count_positive_words())
-        print("Antallet af negative ord hos Danmarks Radio er: ", scraper4.count_negative_words())
+        #print("Antallet af positive ord hos Danmarks Radio er: ", scraper4.count_positive_words())
+        #print("Antallet af negative ord hos Danmarks Radio er: ", scraper4.count_negative_words())
         
-        print("\nOverskrifter fra TV2 :\n")
-        scraper1.print_texts()
-        print("\nOverskrifter fra Borsen :\n")
-        scraper2.print_texts()
-        print("\nOverskrifter fra Finans :\n")
-        scraper3.print_texts()
-        print("\nOverskrifter fra Danmarks Radio :\n")
-        scraper4.print_texts()
+        #print("\nOverskrifter fra TV2 :\n")
+        #scraper1.print_texts()
+        #print("\nOverskrifter fra Borsen :\n")
+        #scraper2.print_texts()
+        #print("\nOverskrifter fra Finans :\n")
+        #scraper3.print_texts()
+        #print("\nOverskrifter fra Danmarks Radio :\n")
+        #scraper4.print_texts()
 
 if __name__ == '__main__':
     Main()
