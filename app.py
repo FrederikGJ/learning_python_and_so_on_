@@ -1,15 +1,16 @@
 from flask import Flask, render_template
+from main import Main
 
-# Create the Flask application
 app = Flask(__name__)
 
-# Define a route and a function to handle it
 @app.route('/')
-def hello(): 
-   return render_template('index.html')
+def home():
+    main = Main()
+    total_negative = main.total_negative
+    total_positive = main.total_positive
 
-# Run the application
-if __name__ == '__main__':
+    return render_template('index.html', total_negative=total_negative, total_positive=total_positive)
+
+if __name__ == "__main__":
     app.run()
-
 
