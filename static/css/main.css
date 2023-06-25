@@ -1,3 +1,9 @@
+body {
+    background-color: #f9f9f9;  /* soft gray */
+    font-family: 'Roboto', sans-serif; /* Roboto font */
+    color: #414a4c; /* dark gray */
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 .container {
@@ -10,13 +16,3 @@
     padding: 0;
     margin-top: 25vh; /* Moves container content 25% away from the top */
 }
-
-body {
-    background-color: #f9f9f9;  /* soft gray */
-    font-family: 'Roboto', sans-serif; /* Roboto font */
-    color: #414a4c; /* dark gray */
-}
-
-
-
-
