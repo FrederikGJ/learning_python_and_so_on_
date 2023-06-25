@@ -1,0 +1,3 @@
+in this case you do:  
+
+source env/bin/activate
