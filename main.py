@@ -10,8 +10,8 @@ class Main:
         scraper3 = FinansScraper()
         scraper4 = DRSCraper()
         
-        total_negative = scraper1.count_negative_words() + scraper2.count_negative_words() + scraper3.count_negative_words() + scraper4.count_negative_words()
-        total_positive = scraper1.count_positive_words() + scraper2.count_positive_words() + scraper3.count_positive_words() + scraper4.count_positive_words()
+        self.total_negative = scraper1.count_negative_words() + scraper2.count_negative_words() + scraper3.count_negative_words() + scraper4.count_negative_words()
+        self.total_positive = scraper1.count_positive_words() + scraper2.count_positive_words() + scraper3.count_positive_words() + scraper4.count_positive_words()
 
         #print("Antallet af positive ord hos tv2 er: ", scraper1.count_positive_words())
         #print("Antallet af negative ord hos tv2 er: ", scraper1.count_negative_words())
