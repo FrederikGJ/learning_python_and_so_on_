@@ -16,3 +16,7 @@ body {
     padding: 0;
     margin-top: 25vh; /* Moves container content 25% away from the top */
 }
+
+.textbox {
+  margin: 10px;
+}
