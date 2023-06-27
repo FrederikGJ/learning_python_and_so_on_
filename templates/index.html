@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="static/css/main.css">
 </head>
 <body>
-
     <div class="container">
         <h1>Sentiment analyser for the danish economy</h1>
         <p>The analysis is based on a simple analysis of words used in danish economic, business and financial media.</p>
@@ -14,8 +13,18 @@
         <h2>Total Positive Points</h2>
         <p>{{ total_positive }}</p>
     </div>
+     
+    <div class="barchart">
+        <div id='chart' class='chart'></div>
+    </div>
+     
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script type='text/javascript'>
+        var graphs = JSON.parse('{{ graphJSON | safe }}');
+        Plotly.plot('chart', graphs, {});
+    </script>
 
-
-  </body>
+</body>
 </html>
+
 
