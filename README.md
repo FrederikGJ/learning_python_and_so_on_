@@ -1,4 +1,4 @@
-#sentiment analyser
+# Sentiment analyser
 Basic economic sentiment analyser.
 
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/FrederikGJ/sentiment_analyser?logo=GitHub&style=flat-square">
