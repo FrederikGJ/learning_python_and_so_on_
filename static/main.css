@@ -1,0 +1,65 @@
+/* Reset default styles */
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Body styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffffa5;
+        color: #333;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 5px;
+        text-align: center;
+        background-color: #ffffffa5;
+        border-radius: 4px;
+        
+    }
+    
+    h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    
+    .barchart {
+        margin-top: 30px;
+    }
+    
+    .chart {
+        width: 100%;
+        height: 400px;
+    }
+    
+    /* Customize link styles */
+    a {
+        color: #337ab7;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Add some spacing */
+    p + p {
+        margin-top: 15px;
+    }
+    
